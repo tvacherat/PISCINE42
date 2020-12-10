@@ -1,0 +1,1 @@
+bad_tests.sh: line 2: ../bsq: No such file or directory
