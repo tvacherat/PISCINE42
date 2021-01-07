@@ -6,7 +6,7 @@
 /*   By: tvachera <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/15 14:52:11 by tvachera          #+#    #+#             */
-/*   Updated: 2020/09/15 14:52:17 by tvachera         ###   ########.fr       */
+/*   Updated: 2021/01/07 19:37:35 by tvachera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,7 +89,7 @@ char	**ft_split(char *str, char *charset)
 		while (is_charset(str[i], charset) == FALSE && str[i])
 			i++;
 	}
-	if (!(tab = malloc(sizeof(char *) * count + 1)))
+	if (!(tab = malloc(sizeof(char *) * (count + 1))))
 		return (0);
 	fill_tab(tab, str, charset, count);
 	return (tab);

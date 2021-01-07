@@ -6,7 +6,7 @@
 /*   By: tvachera <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/14 14:14:40 by tvachera          #+#    #+#             */
-/*   Updated: 2020/09/17 15:52:46 by tvachera         ###   ########.fr       */
+/*   Updated: 2021/01/07 19:36:53 by tvachera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int		get_word_size(char *str, char *charset)
 	unsigned int	i;
 
 	i = 0;
-	while (is_charset(str[i], charset) == FALSE && str[i])
+	while (str[i] && is_charset(str[i], charset) == FALSE)
 		i++;
 	return (i + 1);
 }
