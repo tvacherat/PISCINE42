@@ -6,7 +6,7 @@
 /*   By: tvachera <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/25 14:34:41 by tvachera          #+#    #+#             */
-/*   Updated: 2020/09/29 15:32:08 by tvachera         ###   ########.fr       */
+/*   Updated: 2021/02/08 13:05:55 by tvachera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ void	ft_list_remove_if(t_list **begin_list, void *data_ref, int (*cmp)()
 			(*free_fct)(temp->data);
 			free(temp);
 		}
-		element = element->next;
+		else
+			element = element->next;
 	}
 }
